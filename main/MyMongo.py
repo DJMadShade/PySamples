@@ -24,6 +24,12 @@ class MyMongo:
         def delete(self, filterBy: Any) -> None:
             self.catalog.delete_many(filterBy)
 
+        def index_information(self):
+            return self.catalog.index_information()
+
+        def create_index(self, index_name, unique=True):
+            return self.catalog.create_index(index_name, unique=unique)
+
     __instances: Dict[str, __MyClient] = {}
 
     def __new__(cls, uri: str, db: str, catalog: str) -> __MyClient:

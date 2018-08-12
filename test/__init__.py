@@ -17,5 +17,10 @@ class GenerateTestData:
             Person("Nathan", "Machuga", ObjectId('5b6f524093dda139c051a1f4')),
             Person("Isabella", "Machuga", ObjectId('5b6f524093dda139c051a1f5'))
         }
+
+        index_name = "id"
+        if index_name not in people.index_information():
+            people.create_index(index_name, unique=True)
+
         personIds = set(people.create(person.toDict()) for person in machuga)
         print("Created people: %s" % ', '.join(str(personId) for personId in personIds))
