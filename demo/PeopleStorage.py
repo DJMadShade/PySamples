@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from main.MyMongo import MyMongo
 from main.Person import Person
 from test import GenerateTestData
