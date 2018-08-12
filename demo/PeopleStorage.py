@@ -1,6 +1,6 @@
 from main.MyMongo import MyMongo
 from main.Person import Person
-from test.GenerateTestData import GenerateTestData
+from test import GenerateTestData
 
 GenerateTestData.populatePeople()
 
