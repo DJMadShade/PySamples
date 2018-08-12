@@ -1,8 +1,8 @@
-from MyMongo import MyMongo
-from Person import Person
-from bson import ObjectId
+from main.MyMongo import MyMongo
+from main.Person import Person
+from test.GenerateTestData import GenerateTestData
 
-from .test import GenerateTestData
+GenerateTestData.populatePeople()
 
 people = MyMongo("mongodb://localhost:27017", "PySamples", "People")
 

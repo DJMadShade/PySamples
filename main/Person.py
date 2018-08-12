@@ -1,6 +1,7 @@
 from typing import NamedTuple
 from bson import ObjectId
 
+
 class Person(NamedTuple):
     first: str
     last: str
@@ -8,3 +9,6 @@ class Person(NamedTuple):
 
     def __str__(self):
         return "%s %s" % (self.first, self.last)
+
+    def toDict(self):
+        return self._asdict()

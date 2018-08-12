@@ -1,6 +1,7 @@
 from typing import Any, Dict
 from pymongo import MongoClient
 
+
 class MyMongo:
     class __MyClient:
         def __init__(self, uri: str, db: str, catalog: str):
