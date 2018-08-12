@@ -12,11 +12,8 @@ To run the demo:
 
     python demo/PeopleStorage.py
     
-    
 or
 
     ./demo/PeopleStorage.py
 
-
-    
 
